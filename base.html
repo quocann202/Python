@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI Assistant</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='darkmode.css') }}">
+    <link rel="shortcut icon" href="static/images/cropped-favicon.jpg.webp" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.homepage-navbar').addClass('scrolled');
+            } else {
+                $('.homepage-navbar').removeClass('scrolled');
+            }
+        });
+    </script>
+    <div>
+        {% block homepage_content %} {% endblock %}
+    </div>
+    <div>
+        {% block paraphrase_content %} {% endblock %}
+    </div>
+
+    <div>
+        {% block grammarcheck_content %} {% endblock %}
+    </div>
+
+    <div>
+        {% block plagiarism_content %} {% endblock %}
+    </div>
+
+    <div>
+        {% block textcompletion_content %} {% endblock %}
+    </div>
+    <div>
+        {% block login_content %} {% endblock %}
+    </div>
+    <div>
+        {% block signup_content %} {% endblock %}
+    </div>
+    <div class="footer">
+        <p style="font-size: 1rem;">@Copyright by FIT Hanu Students</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='function.js') }}"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,206 @@
+.dark-mode .member {
+    border: 3px solid #02001a;
+    background-color: #02001a;
+}
+
+.dark-mode .template {
+    background-color: #02001a;
+    color: white
+}
+
+.dark-mode textarea {
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: 2px solid white;
+    font-weight: 200;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all .6s ease-out;
+    font-size: 1rem;
+    outline-color: transparent;
+    outline-style: none;
+    padding: 10px;
+    background-color: #02001a;
+}
+
+.dark-mode .dashboard-content {
+    background-color: #02001a;
+}
+
+.dark-mode div,
+.dark-mode label,
+.dark-mode .login-field {
+    color: white;
+}
+
+.dark-mode {
+    background-color: transparent;
+    background-image: url("images/6211.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 !important;
+}
+
+.dark-home.dark-mode {
+    background-color: transparent;
+    background-image: url("images/images.jfif") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 !important;
+    transition: all 0.2s ease-out !important;
+}
+
+.dark-mode .login-border {
+    background-color: #02001a;
+}
+
+.dark-home {
+    transition: all 0.2s ease-out !important;
+    background-image: url("images/air-sky-cloud-background.jpg") !important;
+}
+
+.dark-mode .login-field {
+    background-color: #02001a;
+}
+
+.dark-mode h1.home_title {
+    color: magenta;
+}
+
+.dark-mode .text_intro a {
+    background-color: #02001a;
+    color: white;
+}
+
+.dark-mode .background {
+    filter: brightness(0.5);
+}
+.dark-mode .homepage-navbar {
+    background-color: white;
+}
+
+.dark-mode .top {
+    color: #02001a;
+}
+
+.dark-mode .home-icon {
+    filter: invert(0);
+}   
+
+.home-icon {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+    padding-right: 5px;
+    transition: all 0.3s ease-out;
+}
+
+.dark-mode .darkmode {
+    filter: invert(0);
+}
+.dark-mode .darkmode:hover {
+    filter: invert(1);
+}
+.dark-mode .username {
+    color:black !important;
+    border-right: 2px solid black;
+}
+.dark-mode .footer {
+    background-color:#02001a;
+    color: white;
+}
+.dark-mode .gg:hover {
+    background-color: midnightblue;
+}
+.dark-mode .login-field:hover {
+    background-color: midnightblue;
+}
+.login-field:hover {
+    background-color: lavender;
+}
+.dark-mode .object:hover {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.dark-mode .member:hover {
+    background-color: white;
+    border: 3px solid black;
+}
+.dark-mode .member:hover .name, .dark-mode .member:hover .about {
+    color: black !important;
+}
+
+.dark-mode .assist {
+    background-color: #02001a;
+    border: 3px solid white;
+    color: white;
+}
+.dark-mode .assist:hover {
+    background-color: black !important;
+    border: 3px solid mediumvioletred !important;
+    color: yellow !important;
+}
+
+.loader {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    border-top: 10px solid #00e7ff;
+    border-bottom: 10px solid yellow;
+    border-right: 10px solid red;
+    border-left: 10px solid #56ff00;
+    border-style: dotted;
+    padding: 2px;
+    margin-right: 2rem;
+    transition: all 0.3s ease-out;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loading {
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: cursive;
+    padding: 5px;
+    color: mediumvioletred;
+}
+
+.gg.load {
+    padding: 8px 2rem;
+    background-color: transparent;
+}
+
+.google.process {
+    display: none;
+}
+
+.img-login {
+    background-image: url('images/20276548.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.dark-mode .img-login {
+    background-image: url('images/bda5be61177acdb5fd46c3219f8b81a0.jpg');
+}
+
+.img-login.signup {
+    background-image: url('images/falling-miles-morales-spider-man-wallpaper-2048x1152_49.jpg');
+}
+
+.dark-mode .img-login.signup {
+    background-image: url('images/spider-verse-universe-5k-jj.jpg');
+}

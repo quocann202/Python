@@ -1,0 +1,9 @@
+Flask
+Flask-Login
+WTForms
+mysql
+openai
+google
+mysql.connector
+flask_wtf
+requests

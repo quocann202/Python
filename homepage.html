@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block homepage_content %}
+<body class="dark-home">
+<div class="homepage-navbar">
+    <ul class="list">
+        <li class="object" id="home"> <a class="top" href="/"><img
+                    class="home-icon"
+                    src="static/images/home.png"> Home</a></li>
+        <li class="object" id="grammar-check"><a class="top" href="/grammar-check">Check Grammar</a></li>
+        <li class="object" id="plagiarism-check"><a class="top" href="/plagiarism">Check Plagiarism</a></li>
+        <li class="object" id="text-completion"><a class="top" href="/text-completion">Text Completion</a></li>
+        <li class="object" id="paraphrase"><a class="top" href="/paraphrase">Paraphrase</a></li>
+        <li class="dark">
+            <button onclick="myFunction()" class="darkmode"><img class="mode"
+                    src="static/images/night-mode.png"></button>
+        </li>
+        <li class="session" id="menu" style="display: none;"><a class="menu top" onclick="toggleMenu()">|||</a></li>
+        <li class="session">
+            {% if current_user %}
+            <div class="logged-in">
+                <div class="picture">
+                    <a href="/user-image"><img src="{{ current_user.image }}" alt="Avatar"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div class="view">View</div>
+                    </a>
+                </div>
+                <div class="username">{{ current_user.username }}</div>
+                <a class="top" href="/logout">Logout</a>
+                {% else %}
+                <a class="top" href="/login">Login</a>
+            </div>
+            {% endif %}
+        </li>
+
+    </ul>
+</div>
+<div class="intro" id="intro">
+    <img class="background" src="static/images/aliens-city-t8-2560x1440.jpg" alt="">
+
+    <div class="text_intro">
+        <h1 class="home_title">About</h1>
+        <p class="animated-text">Welcome to our assistant tool! Our tool is designed to assist you in various aspects of written communication. Whether you are a student, a professional, or anyone who needs to communicate effectively through writing, our tool has features that can help you improve your writing skills and productivity.</p>
+        <p class="animated-text">Our assistant tool includes a range of useful features, such as grammar check, paraphrasing, plagiarism check, and text completion. With our grammar check feature, you can quickly and easily identify and correct any grammatical errors in your writing. Our paraphrasing feature helps you to rephrase sentences and paragraphs to avoid plagiarism and improve the clarity and flow of your writing.</p>
+        <div class="learnmore"><a href="#tools">Learn more</a></div>
+    </div>
+</div>
+<div class="homepage">
+    <div>
+        <h1 class="home_title">Our Team</h1>
+        <p>Our team has put in a tremendous amount of hard work and dedication to develop a sophisticated Flask Python
+            application with integrated OpenAI API, featuring advanced functionalities such as grammar checking,
+            paraphrasing, plagiarism checking, and text completion.</p>
+        <div class="team">
+            <div class="member">
+                <img class="avatar"
+                    src="https://img.freepik.com/premium-photo/3d-cat-avatar-online-games-web-account-avatar_147351-46.jpg?w=2000"
+                    alt="">
+                <div class="name">Le Quoc An</div>
+                <div class="about">Full-stack Dev</div>
+            </div>
+            <div class="member">
+                <img class="avatar" src="https://cdn.shopify.com/s/files/1/1832/0821/files/catshark.jpg?v=1649869148"
+                    alt="">
+                <div class="name">Le Hoang Minh</div>
+                <div class="about">Front-end Dev, PowerPoint</div>
+            </div>
+            <div class="member">
+                <img class="avatar"
+                    src="https://store.playstation.com/store/api/chihiro/00_09_000/container/BR/en/99/UP3493-CUSA07861_00-AV00000000000139/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+                    alt="">
+                <div class="name">Hoang Anh Tu</div>
+                <div class="about">Tester, Research Analyst</div>
+            </div>
+        </div>
+    </div>
+    <div id="tools">
+        <h1 class="home_title">Assistant Tools</h1>
+        <p>Assistant tools such as grammar check, paraphrase, plagiarism check, and text completion are useful resources
+            for improving the quality and efficiency of written communication.</p>
+        <div class="assist-tool">
+            <a id="1" class="assist" href="/grammar-check">Check Grammar</a>
+            <a id="2" class="assist" href="/plagiarism">Check Plagiarism</a>
+            <a id="3" class="assist" href="/text-completion">Text Completion</a>
+            <a id="4" class="assist" href="/paraphrase">Paraphrase Tools</a>
+        </div>
+    </div>
+    <a href="#intro">
+        <div class="up">⇪</button>
+    </a>
+</div>
+</body>
+
+{% endblock %}

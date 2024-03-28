@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block login_content %}
+
+{% if session['logged_in'] %}
+
+You're logged in already!
+
+{% else %}
+<div class="homepage-navbar">
+    <ul class="list">
+        <li class="object" id="home"> <a class="top" href="/"><img class="home-icon" src="static/images/home.png">
+                Home</a></li>
+        <li class="object" id="grammar-check"><a class="top" href="/grammar-check">Check Grammar</a></li>
+        <li class="object" id="plagiarism-check"><a class="top" href="/plagiarism">Check Plagiarism</a></li>
+        <li class="object" id="text-completion"><a class="top" href="/text-completion">Text Completion</a></li>
+        <li class="object" id="paraphrase"><a class="top" href="/paraphrase">Paraphrase</a></li>
+        <li class="dark">
+            <button onclick="myFunction()" class="darkmode"><img class="mode"
+                    src="static/images/night-mode.png"></button>
+        </li>
+        <li class="session" id="menu" style="display: none;"><a class="menu top" onclick="toggleMenu()">|||</a></li>
+        <li class="session">
+            {% if current_user %}
+            <div class="logged-in">
+                <div class="picture">
+                    <a href="/user-image"><img src="{{ current_user.image }}" alt="Avatar"
+                            style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div class="view">View</div>
+                    </a>
+                </div>
+                <div class="username">{{ current_user.username }}</div>
+                <a class="top" href="/logout">Logout</a>
+                {% else %}
+                <a class="top" href="/login">Login</a>
+            </div>
+            {% endif %}
+        </li>
+
+    </ul>
+</div>
+
+<div class="login">
+
+
+    <div class="login-content">
+        <div class="login-form">
+            <div class="login-screen">
+                <div class="img-login"></div>
+                <div class="login-border">
+                    <div class="app-title">
+                        <h1 class="log">Welcome!</h1>
+                    </div>
+                    <div class="google" id="google">
+                        <a href="/login/google" onclick="loginProcess()">
+                            <div class="gg">
+
+                                <img class="img_gg" src="https://cdn-icons-png.flaticon.com/512/2504/2504739.png"
+                                    alt="">
+                                <div class="sign_gg">Sign in with google</div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="google process" id="process">
+                        <div class="gg load">
+                            <div class="loader"></div>
+                            <div class="loading">Processing...</div>
+                        </div>
+                    </div>
+                    <br>
+                    <h1 class="log-into">Or sign in with</h1>
+                    <form action="/login" method="POST">
+                        <div class="control-group">
+                            <input type="email" class="login-field" value="" placeholder="Enter your email"
+                                name="email" required>
+                            <label class="login-field-icon fui-user" for="login-email"></label>
+                        </div>
+                        <div class="control-group">
+                            <input type="password" class="login-field" value="" placeholder="Enter your password"
+                                name="password" required>
+                            <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
+                        <input type="submit" value="Log in" class="button">
+                        <div class="sign_up">Don't have an account yet?
+                            <a class="log-tinny" href="/signup">Sign up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI Assistant</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="shortcut icon" href="static/images/cropped-favicon.jpg.webp" type="image/x-icon">
+</head>
+
+<body style="background-color: black;">
+{% if current_user %}
+<a class="close" href="javascript:history.back()">
+    <div class="x">✖</div>
+</a>
+
+<div class="user-ava">
+    <div class="user-profile">
+        <img class="user-picture" src="{{ current_user.image }}" alt="Avatar">
+    </div>
+</div>
+
+{% endif %}
+</body>
